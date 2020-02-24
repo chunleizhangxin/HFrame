@@ -1,0 +1,5 @@
+include ':app',':picture_library',':VideoCompressorLib',':ucrop',':pulltorefresh'
+project(':picture_library').projectDir = new File('./include/picture_library')
+project(':VideoCompressorLib').projectDir = new File('./include/VideoCompressorLib')
+project(':ucrop').projectDir = new File('./include/ucrop')
+project(':pulltorefresh').projectDir = new File('./include/pulltorefresh')

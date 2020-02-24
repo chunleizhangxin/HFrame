@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">基础框架</string>
+    <!-- 原始textview -->
+    <string name="tag_source_textview">tag_source_textview</string>
+    <!-- 收起展开按钮view -->
+    <string name="tag_expand_view">tag_expand_view</string>
+    <string name="permission_dialog_app_remind_msg">应用缺少必要权限,无法正常运行，请到应用权限管理进行设置！</string>
+    <string name="permission_dialog_positive_btn">去设置</string>
+    <string name="permission_dialog_negative_btn">取消</string>
+</resources>

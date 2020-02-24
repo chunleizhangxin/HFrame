@@ -1,0 +1,14 @@
+ext {
+
+    android = [
+            compileSdkVersion: 26,
+            support_version:"26.0.2",
+            buildToolsVersion: "26.0.2",
+            applicationId    : "com.android.styy",
+            minSdkVersion    : 23,
+            targetSdkVersion : 26,
+            versionCode      : 10006100,
+            versionName      : "1.0.6.100"
+    ]
+
+}

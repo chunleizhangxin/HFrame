@@ -1,0 +1,81 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+
+apply from: "config.gradle"
+
+buildscript {
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/google'
+        }
+
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+//        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/google'
+        }
+
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
+
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+}
+ext{
+    if(!project.hasProperty('isAarRelease')){
+        isAarRelease = false;
+    }
+    if(!project.hasProperty('isLite')){
+        isLite = false;
+    }
+    if(!project.hasProperty('sdkVersion')){
+        sdkVersion = '3.2.3'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+

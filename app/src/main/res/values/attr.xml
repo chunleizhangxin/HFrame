@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 标签布局 -->
+    <declare-styleable name="TagLayout" >
+        <attr name="content_marginLeft" format="dimension" />
+        <attr name="content_textClor" format="color" />
+        <attr name="content_textSize" format="dimension" />
+        <attr name="content_split" format="string" />
+        <attr name="content_split_left" format="dimension" />
+        <attr name="content_split_right" format="dimension" />
+        <attr name="content_split_textColor" format="color" />
+    </declare-styleable>
+
+    <!-- 折叠 textView -->
+    <declare-styleable name="ExpandableTextViewAttr">
+        <!-- 允许显示最大行数 -->
+        <attr name="maxExpandLines" format="integer"></attr>
+        <!-- 动画执行时间 -->
+        <attr name="duration" format="integer"></attr>
+    </declare-styleable>
+
+    <!-- 首页果冻布局 -->
+    <declare-styleable name="JellyLayout">
+
+        <!-- 首次加载布局下标 -->
+        <attr name="firstLoadViewIndex" format="integer" />
+
+        <!-- 滚动多少自动滚动 -->
+        <attr name="maxInterceptScrollY" format="dimension" />
+
+        <!-- 滚动动画时长 -->
+        <attr name="autoScrollAnimaDuration" format="integer" />
+
+
+    </declare-styleable>
+
+    <!-- 播放/暂停按钮 -->
+    <declare-styleable name="PlayControllerLayout">
+
+        <attr name="drawableRes" format="reference" />
+
+         <!-- 进度条颜色 -->
+        <attr name="progressColor" format="color" />
+
+    </declare-styleable>
+
+    <!-- 刷新 Layout  -->
+    <declare-styleable name="RefreshLayout">
+        <attr name="recyclerViewClass" format="string"/>
+        <attr name="refreshEnabled" format="boolean" />
+        <attr name="loadMoreEnabled" format="boolean" />
+    </declare-styleable>
+
+    <!-- google 加载 -->
+    <declare-styleable name="GoogleCircleProgressView">
+        <attr name="gcp_inner_radius" format="dimension"/>
+        <attr name="gcp_background_color" format="color"/>
+        <attr name="gcp_progress_color" format="color"/>
+        <attr name="gcp_progress_stoke_width" format="dimension"/>
+        <attr name="gcp_show_arrow" format="boolean"/>
+        <attr name="gcp_enable_circle_background" format="boolean"/>
+        <attr name="gcp_arrow_width" format="dimension"/>
+        <attr name="gcp_arrow_height" format="dimension"/>
+
+        <attr name="gcp_progress" format="integer"/>
+        <attr name="gcp_max" format="integer"/>
+
+
+        <attr name="gcp_progress_text_size" format="dimension"/>
+        <attr name="gcp_progress_text_color" format="color"/>
+
+        <!--<attr name="gcp_progress_text_offset" format="dimension"/>-->
+
+        <attr name="gcp_progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <!-- 星星评分 -->
+    <declare-styleable name="StarBarView" >
+        <attr name="srb_borderColor" format="color" />
+        <attr name="srb_fillColor" format="color" />
+        <attr name="srb_backgroundColor" format="color" />
+        <attr name="srb_starBackgroundColor" format="color" />
+        <attr name="srb_pressedBorderColor" format="color" />
+        <attr name="srb_pressedFillColor" format="color" />
+        <attr name="srb_pressedBackgroundColor" format="color" />
+        <attr name="srb_pressedStarBackgroundColor" format="color" />
+        <attr name="srb_numberOfStars" format="integer" />
+        <attr name="srb_minStarNumber" format="integer" />
+        <attr name="srb_starSize" format="dimension" />
+        <attr name="srb_maxStarSize" format="dimension" />
+        <attr name="srb_starsSeparation" format="dimension" />
+        <attr name="srb_starBorderWidth" format="float" />
+        <attr name="srb_starCornerRadius" format="float" />
+        <attr name="srb_isIndicator" format="boolean" />
+        <attr name="srb_rating" format="float" />
+        <attr name="srb_stepSize" format="float" />
+        <attr name="srb_drawBorderEnabled" format="boolean" />
+        <attr name="srb_gravity" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+        <attr name="clickable" format="boolean"/>
+    </declare-styleable>
+
+    <!-- 开关 按钮 -->
+    <declare-styleable name="SwitchButton" >
+        <attr name="kswThumbDrawable" format="reference"/>
+        <attr name="kswThumbColor" format="color|reference"/>
+        <attr name="kswThumbMargin" format="dimension|reference"/>
+        <attr name="kswThumbMarginTop" format="dimension|reference"/>
+        <attr name="kswThumbMarginBottom" format="dimension|reference"/>
+        <attr name="kswThumbMarginLeft" format="dimension|reference"/>
+        <attr name="kswThumbMarginRight" format="dimension|reference"/>
+        <attr name="kswThumbWidth" format="dimension|reference"/>
+        <attr name="kswThumbHeight" format="dimension|reference"/>
+        <attr name="kswThumbRadius" format="dimension|reference"/>
+        <attr name="kswBackRadius" format="dimension|reference"/>
+        <attr name="kswBackDrawable" format="reference"/>
+        <attr name="kswBackColor" format="color|reference"/>
+        <attr name="kswFadeBack" format="boolean"/>
+        <attr name="kswThumbRangeRatio" format="float"/>
+        <attr name="kswAnimationDuration" format="integer"/>
+        <attr name="kswTintColor" format="color|reference"/>
+        <attr name="kswTextOn" format="string"/>
+        <attr name="kswTextOff" format="string"/>
+        <attr name="kswTextThumbInset" format="dimension"/>
+        <attr name="kswTextExtra" format="dimension"/>
+        <attr name="kswTextAdjust" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="SignKeyWordTextView">
+        <attr name="signText" format="string"/>
+        <attr name="signTextColor" format="color"/>
+    </declare-styleable>
+</resources>
