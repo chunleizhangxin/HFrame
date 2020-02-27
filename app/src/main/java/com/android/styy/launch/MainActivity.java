@@ -1,8 +1,11 @@
 package com.android.styy.launch;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.android.styy.R;
@@ -12,6 +15,7 @@ import com.android.styy.common.config.AppIntent;
 import com.android.styy.common.manager.ActivitiesManager;
 import com.android.styy.common.util.FileAddedView;
 import com.android.styy.common.util.ImmersiveUtil;
+import com.android.styy.common.widget.StandardGSYAudioPlayer;
 import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.entity.LocalMedia;
@@ -25,6 +29,10 @@ public class MainActivity extends BaseAppCompatActivity{
 
     @BindView(R.id.file_add_linear)
     LinearLayout mFileParent;
+    @BindView(R.id.audio_player)
+    StandardGSYAudioPlayer mAudioPlayer;
+    @BindView(R.id.txt_btn)
+    View mBtnView;
 
     FileAddedView mFileAddedView;
 
@@ -61,6 +69,14 @@ public class MainActivity extends BaseAppCompatActivity{
                 intent.putExtra(PicPreviewActivity.KEY_POS, position);
                 intent.putExtra(PicPreviewActivity.KEY_DATA, (Serializable) files);
                 mContext.startActivity(intent);
+            }
+        });
+        mBtnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String testAudioUrl = "http://file.kuyinyun.com/group1/M00/90/B7/rBBGdFPXJNeAM-nhABeMElAM6bY151.mp3";
+                mAudioPlayer.setUp(testAudioUrl, true, "");
+                mAudioPlayer.setVisibility(View.VISIBLE);
             }
         });
     }

@@ -8,6 +8,7 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import com.android.styy.common.net.Interceptor.LogInterceptor;
 import com.android.styy.common.net.Interceptor.service.ServiceInterceptor;
 
 public class NetWorkManager {
@@ -27,7 +28,7 @@ public class NetWorkManager {
 
         OkHttpClient okHttpClient = getDefaultHttpBuilder()
                 .addInterceptor(new ServiceInterceptor())
-//                .addInterceptor(new LogInterceptor())
+                .addInterceptor(new LogInterceptor())
                 .build();
 
 

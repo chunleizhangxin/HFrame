@@ -5,18 +5,19 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.android.styy.common.dao.DaoMaster;
 import com.android.styy.common.dao.DaoSession;
+import com.android.styy.common.dao.CustomOpenHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DBManager {
 
-    private DaoMaster.DevOpenHelper mHelper;
+    private CustomOpenHelper mHelper;
     private DaoMaster mDaoMaster;
     private SQLiteDatabase mSQLiteDatabase;
 
     private DBManager(Builder builder){
-        mHelper = new DaoMaster.DevOpenHelper(builder.application,"xiaoq-db",null);
+        mHelper = new CustomOpenHelper(builder.application,"styy-db",null);
         mSQLiteDatabase = mHelper.getWritableDatabase();
         mDaoMaster = new DaoMaster(mSQLiteDatabase);
 
@@ -29,7 +30,7 @@ public class DBManager {
        return new Builder(application);
    }
 
-   public DaoMaster.DevOpenHelper getDevOpenHelper(){
+   public DaoMaster.OpenHelper getDevOpenHelper(){
        return mHelper;
    }
 
